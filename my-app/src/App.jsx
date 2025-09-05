@@ -5,6 +5,8 @@ import './App.css'
 import My3DScene from './components/My3DScene'
 import CalgaryMap from './components/CalgaryMap'
 
+// import TestMap from './components/3DMap'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,6 +30,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <h2>{message}</h2>
+      {/* <TestMap /> */}
       <CalgaryMap />
       {/* <My3DScene /> */}
       <div className="card">
