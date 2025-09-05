@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import My3DScene from './components/My3DScene'  //fetch the file properly.
+import My3DScene from './components/My3DScene'
+import CalgaryMap from './components/CalgaryMap'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,7 +28,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <h2>{message}</h2>
-      <My3DScene />
+      <CalgaryMap />
+      {/* <My3DScene /> */}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
