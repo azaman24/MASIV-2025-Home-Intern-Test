@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import CalgaryScape from '../public/CalgaryScape_Logo.png'
 import './App.css'
 import My3DScene from './components/My3DScene'
 import CalgaryMap from './components/CalgaryMap'
+
+// import TestMap from './components/3DMap' DELETE THIS LINE WHEN HOME
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,16 +21,13 @@ function App() {
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={CalgaryScape} className="logo" alt="CalgaryScape logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+              <h1>Explore Calgary</h1>
       </div>
-      <h1>Vite + React</h1>
       <h2>{message}</h2>
+      {/* <TestMap /> */}
       <CalgaryMap />
-      {/* <My3DScene /> */}
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
