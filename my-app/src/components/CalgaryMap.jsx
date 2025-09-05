@@ -6,15 +6,15 @@ import "leaflet/dist/leaflet.css";
 
 function CalgaryMap() {
   return (
-    <div>
-      <h2>Calgary 3D Map</h2>
-      <iframe
-        src="https://maps.calgary.ca/3ddigitalcalgary/"
-        width="100%"
-        height="400px"
-        style={{ border: "none" }}
-        title="3D Digital Calgary Map"
-      ></iframe>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ width: "80vw", borderRadius: "15%" }}>
+        <iframe
+          src="https://maps.calgary.ca/3ddigitalcalgary/"
+          width="100%"
+          height="600vh"
+          style={{ border: "none" }}
+        ></iframe>
+      </div>
     </div>
   );
 }
