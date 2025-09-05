@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import My3DScene from './components/My3DScene'
-import CalgaryMap from './components/CalgaryMap'
+// import CalgaryMap from './components/CalgaryMap'
+import Calgary3DBuildings from './components/CalgaryMap'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,29 +19,13 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <h1>City Dashboard</h1>
       <h2>{message}</h2>
-      <CalgaryMap />
+      <h3 style={{ margin: 8, textAlign: "center" }}>Calgary Boundary Map</h3>
+
+      <Calgary3DBuildings />
+      {/* <CalgaryMap /> */}
       {/* <My3DScene /> */}
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
