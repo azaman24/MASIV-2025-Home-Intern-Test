@@ -5,6 +5,7 @@ const CalgaryScape = './CalgaryScape_Logo.png';
 import './App.css';
 import * as styles from "./styles";
 import SignIn from './components/SignIn';
+import SaveButton from "./components/SaveButton";
 import Map from "./pages/Map";
 
 function Home() {
@@ -46,7 +47,7 @@ function Home() {
           textAlign: "center",
           fontSize: "20px",
           fontWeight: "500",
-          color: "#333",   // make sure it's visible
+          color: "#333",
           display: "block"
         }}
       >
@@ -58,7 +59,7 @@ function Home() {
         style={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",   // vertically center
+          alignItems: "center",
           marginTop: "40px",
           width: "100%",
         }}
@@ -68,7 +69,7 @@ function Home() {
             display: "flex",
             height: "80vh",
             width: "85vw",
-            margin: "0 auto", // horizontally center
+            margin: "0 auto",
           }}
         >
           {/* Left Overlay */}
@@ -124,23 +125,7 @@ function Home() {
       </div>
 
       {/* Save button */}
-      <div style={{ textAlign: "center", marginTop: "20px" }}>
-        <button
-          style={{
-            marginTop: "-50px",
-            backgroundColor: "#FFB703",
-            border: "none",
-            padding: "12px 24px",
-            fontSize: "16px",
-            borderRadius: "8px",
-            cursor: "pointer",
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#e5a800")}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFB703")}
-        >
-          Save
-        </button>
-      </div>
+      <SaveButton />
     </div>
   );
 }
