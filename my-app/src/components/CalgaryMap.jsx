@@ -11,8 +11,8 @@ function CalgaryMap() {
         <iframe
           src="https://maps.calgary.ca/3ddigitalcalgary/"
           width="100%"
-          height="600vh"
-          style={{ border: "none", borderRadius: "15px" }}
+          height="500vh"
+          style={{ border: "5px solid #ccc", borderRadius: "25px", marginTop: "100px" }}
         ></iframe>
       </div>
     </div>

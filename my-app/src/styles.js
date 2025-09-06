@@ -13,7 +13,7 @@ export const headerStyle = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "7.5px 40px",
+  padding: "1px 40px",
   backgroundColor: "#75848aff", // Charcoal gray
   color: "#FFFFFF",
   width: "100%",
@@ -78,8 +78,12 @@ export const backButtonStyle = {
 };
 
 // Intro Paragraph
-export const introParagraph = {
-  marginTop: "200px"
+export const introParagraphStyle = {
+  fontSize: "18px",
+  color: "#333",
+  marginTop: "100px",
+  marginBottom: "20px",
+  textAlign: "center",
 };
 
 // City map placeholder
@@ -102,4 +106,62 @@ export const messageStyle = {
   fontSize: "18px",
   color: "#333",
   marginTop: "10px",
+};
+
+export const mapPageStyle = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  position: "relative",
+  height: "100vh",
+  width: "100%",
+  backgroundColor: "#F5F5F5",
+};
+
+// Left overlay
+export const leftOverlayStyle = {
+  position: "absolute",
+  left: "20px",
+  top: "50%",
+  transform: "translateY(-50%)",
+  display: "flex",
+  flexDirection: "column",
+  gap: "15px",
+  backgroundColor: "rgba(255, 255, 255, 0.9)",
+  padding: "20px",
+  borderRadius: "10px",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+};
+
+// Rectangle map container
+export const mapContainerStyle = {
+  flex: 1,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
+
+export const rectangleMapStyle = {
+  width: "600px",
+  height: "400px",
+  backgroundColor: "#ddd",
+  border: "2px solid #aaa",
+  borderRadius: "8px",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  cursor: "pointer",
+};
+
+// Right overlay (appears when building clicked)
+export const rightOverlayStyle = {
+  position: "absolute",
+  right: "20px",
+  top: "50%",
+  transform: "translateY(-50%)",
+  backgroundColor: "rgba(255, 255, 255, 0.95)",
+  padding: "20px",
+  borderRadius: "10px",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+  minWidth: "250px",
 };
