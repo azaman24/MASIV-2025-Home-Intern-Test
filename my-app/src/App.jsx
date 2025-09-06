@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
-import CalgaryScape from '../public/CalgaryScape_Logo.png'
-import './App.css'
-import My3DScene from './components/My3DScene'
-import CalgaryMap from './components/CalgaryMap'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+const CalgaryScape = './CalgaryScape_Logo.png';
+import './App.css';
+import * as styles from "./styles";
+import TopNavbar from './components/header';
+import SignIn from './components/SignIn'; // Import the SignIn component
+import My3DScene from './components/My3DScene';
+import CalgaryMap from './components/CalgaryMap';
 
-// import TestMap from './components/3DMap' DELETE THIS LINE WHEN HOME
-
-function App() {
-  const [count, setCount] = useState(0)
-
+// The Home component with your current UI
+function Home() {
+  const navigate = useNavigate();
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -19,28 +21,47 @@ function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={CalgaryScape} className="logo" alt="CalgaryScape logo" />
-        </a>
-              <h1>Explore Calgary</h1>
+      <div style={styles.appStyle}>
+        <header style={styles.headerStyle}>
+          <img id="site-logo" src={CalgaryScape} className="logo" alt="CalgaryScape logo" />
+          <h1>Explore Calgary</h1>
+          <div id="auth-btns">
+            {/* Replaced Sign Up / Sign In buttons with one navigation button */}
+            <button 
+              id="signin-btn" 
+              onClick={() => navigate("/signin")}
+              style={{ padding: '8px 16px', fontSize: '16px', cursor: 'pointer' }}
+            >
+              Sign In
+            </button>
+          </div>
+        </header>
       </div>
-      <h2>{message}</h2>
-      {/* <TestMap /> */}
-      <CalgaryMap />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      {/* <CalgaryMap /> */}
+      <p id="intro-paragraph">Explore in 3D. Search smarter. Save what inspires you</p>
+      {/* <h2>{message}</h2> */}
+      {/* <My3DScene /> */}
+      {/* <CalgaryMap /> */}
+      <div id="city-map">
+        <CalgaryMap />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div id="explore-container">
+        <button id="explore-btn">Explore Map</button>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+// Main App with routing
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
