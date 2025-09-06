@@ -1,21 +1,18 @@
-// src/components/ExploreButton.jsx
+// src/components/SaveButton.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import * as styles from "../styles";
 
-function ExploreButton() {
-  const navigate = useNavigate();
-
+function SaveButton({ onClick }) {
   return (
     <button
-      style={styles.exploreButtonStyle}
-      onClick={() => navigate("/map")}
+      style={styles.exploreButtonStyle} // reuse same styling
+      onClick={onClick}                 // action passed via prop
       onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#e5a800")}
       onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFB703")}
     >
-      Explore
+      Save
     </button>
   );
 }
 
-export default ExploreButton;
+export default SaveButton;
